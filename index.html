@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dpboss Matka App</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    body{
+      background:#133f28;
+      font-family:'Poppins',sans-serif;
+    }
+
+    .main-wrapper{
+      max-width:395px;
+      margin:auto;
+      padding:20px 15px 40px;
+      text-align:center;
+    }
+
+    /* Badge */
+    .trending-badge{
+      display:inline-block;
+      background:linear-gradient(90deg,#ff4fa0,#ff72b5);
+      color:#fff;
+      padding:8px 18px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:600;
+      box-shadow:0 5px 15px rgba(255,79,160,.35);
+      margin-bottom:22px;
+    }
+
+    /* App Box */
+    .app-icon-box{
+      width:140px;
+      height:140px;
+      background:#fff;
+      border-radius:25px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 20px rgba(0,0,0,.06);
+    }
+
+    /* ADD THIS NEW CSS */
+
+.app-logo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:25px;
+}
+
+    /* .app-icon::before,
+    .app-icon::after{
+      content:'';
+      position:absolute;
+      width:18px;
+      height:40px;
+      background:linear-gradient(to bottom,#ffb5d2,#ff4d8d);
+      border-radius:12px;
+      transform:rotate(40deg);
+    }
+
+    .app-icon::after{
+      transform:rotate(-40deg);
+    } */
+
+    /* Title */
+    .title{
+      color:#ecc836;
+      font-weight:700;
+      font-size:42px;
+      margin-top:25px;
+    }
+
+    .subtitle{
+      color:#fffcfc;
+      font-size:16px;
+      line-height:1.8;
+      margin-top:10px;
+    }
+
+    /* DOWNLOAD BUTTON */
+    .download-btn{
+      position:relative;
+      overflow:hidden;
+      margin-top:28px;
+      background:linear-gradient(90deg,#2f67ff,#1f43c9);
+      color:#fff;
+      border:none;
+      width:100%;
+      padding:20px;
+      border-radius:24px;
+      font-size:22px;
+      font-weight:700;
+      box-shadow:0 12px 25px rgba(47,103,255,.35);
+      transition:all .3s ease;
+      animation:pulse 2s infinite;
+    }
+
+    /* Hover Effect */
+    .download-btn:hover{
+      transform:translateY(-3px) scale(1.02);
+      box-shadow:0 15px 30px rgba(47,103,255,.5);
+      background:linear-gradient(90deg,#2559eb,#183ab6);
+    }
+
+    /* Click Effect */
+    .download-btn:active{
+      transform:scale(.96);
+    }
+
+    /* Shine Animation */
+    .download-btn::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-80px;
+      width:50px;
+      height:100%;
+      background:rgba(255,255,255,.35);
+      transform:skewX(-20deg);
+      animation:shine 2.5s infinite;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse{
+      0%{
+        box-shadow:
+        0 12px 25px rgba(47,103,255,.35),
+        0 0 0 0 rgba(47,103,255,.4);
+      }
+
+      70%{
+        box-shadow:
+        0 12px 25px rgba(47,103,255,.35),
+        0 0 0 18px rgba(47,103,255,0);
+      }
+
+      100%{
+        box-shadow:
+        0 12px 25px rgba(47,103,255,.35),
+        0 0 0 0 rgba(47,103,255,0);
+      }
+    }
+
+    /* Shine Move */
+    @keyframes shine{
+      0%{
+        left:-80px;
+      }
+
+      100%{
+        left:120%;
+      }
+    }
+
+    /* Feature Cards */
+    .feature-card{
+      background:#fff;
+      border-radius:24px;
+      padding:26px 24px;
+      text-align:left;
+      margin-top:24px;
+      box-shadow:0 6px 18px rgba(0,0,0,.04);
+    }
+
+    .feature-title{
+      font-size:28px;
+      font-weight:500;
+      margin-bottom:10px;
+      color:#111;
+    }
+
+    .feature-text{
+      color:#666;
+      font-size:16px;
+    }
+
+    /* Footer Badge */
+    .bottom-badge{
+      display:inline-block;
+      background:#fff;
+      padding:12px 24px;
+      border-radius:30px;
+      margin-top:35px;
+      font-weight:600;
+      color:#d1146a;
+      box-shadow:0 6px 18px rgba(0,0,0,.05);
+    }
+
+    /* Responsive */
+    @media(max-width:576px){
+
+      .title{
+        font-size:30px;
+      }
+
+      .download-btn{
+        font-size:18px;
+        padding:16px;
+      }
+
+      .feature-title{
+        font-size:22px;
+      }
+
+      .feature-text{
+        font-size:14px;
+      }
+
+      .app-icon-box{
+        width:120px;
+        height:120px;
+      }
+
+    }
+
+  </style>
+
+  <!-- meta -->
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <!-- Top Badge -->
+    <div class="trending-badge">
+      🔥 MOST TRENDING APP
+    </div>
+
+    <!-- App Icon -->
+    <div class="app-icon-box">
+  <img src="https://ratansatta.com/assets/images/logo-2.png" alt="App Logo" class="app-logo">
+</div>
+
+    <!-- Title -->
+    <h1 class="title">RATAN SATTA App</h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">
+      Download the official RATAN SATTA Matka Android App for fast
+      results and smooth experience.
+    </p>
+
+    <!-- Download Button -->
+    <button class="download-btn"
+onclick="window.location.href='https://ratansatta.com/assets/apkk/ratan-matka.apk'">
+  ⬇ DOWNLOAD APK
+</button>
+
+    <!-- Features -->
+    <div class="feature-card">
+      <div class="feature-title">⚡ Fast Results</div>
+      <div class="feature-text">
+        Instant updates without delay.
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">🔒 Secure App</div>
+      <div class="feature-text">
+        Your data stays protected.
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">📱 Mobile Friendly</div>
+      <div class="feature-text">
+        Smooth on all Android phones.
+      </div>
+    </div>
+
+    <!-- Footer Badge -->
+    <div class="bottom-badge">
+      ✓ Official APK • ✓ Android Only
+    </div>
+
+  </div>
+
+</body>
+</html>
